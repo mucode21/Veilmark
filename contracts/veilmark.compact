@@ -1,0 +1,99 @@
+pragma language_version >=0.22.0;
+
+import CompactStandardLibrary;
+
+// Veilmark keeps the rule and the outcome public while private eligibility stays in a witness.
+export ledger signal_threshold: Uint<64>;
+export ledger passport: Bytes<32>;
+export ledger window_end: Uint<64>;
+export ledger issuer_tag: Bytes<32>;
+export ledger operator_commitment: Bytes<32>;
+export ledger live: Boolean;
+export ledger accepted: Counter;
+export ledger capacity: Uint<32>;
+export ledger spent_receipts: Set<Bytes<32>>;
+export ledger receipt_index: Map<Bytes<32>, Bytes<32>>;
+export sealed ledger protocol: Bytes<32>;
+
+// These callbacks are private inputs. Their values remain inside the proof circuit.
+witness read_private_signal(): Uint<64>;
+witness read_secret_phrase(): Bytes<32>;
+witness operator_secret(): Bytes<32>;
+
+constructor(
+    threshold: Uint<64>,
+    pass: Bytes<32>,
+    deadline: Uint<64>,
+    issuer: Bytes<32>,
+    operator_hash: Bytes<32>,
+    limit: Uint<32>
+) {
+    signal_threshold = disclose(threshold);
+    passport = disclose(pass);
+    window_end = disclose(deadline);
+    issuer_tag = disclose(issuer);
+    operator_commitment = disclose(operator_hash);
+    live = disclose(true);
+    capacity = disclose(limit);
+    protocol = disclose(pad(32, "Veilmark:protocol:v2"));
+}
+
+// A member proves a hidden signal clears the public rule. Only an anonymous receipt is stored.
+export circuit mark_passed(): [] {
+    assert(disclose(live), "The window is paused");
+    assert(blockTimeLt(disclose(window_end)), "This window has ended");
+    assert(disclose(accepted) < disclose(capacity), "Window capacity reached");
+
+    const signal = read_private_signal();
+    assert(signal >= signal_threshold, "Private signal does not meet the rule");
+
+    const phrase = read_secret_phrase();
+    const receipt = make_receipt_nullifier(phrase, passport);
+    assert(!spent_receipts.member(disclose(receipt)), "This private pass has already been used");
+
+    spent_receipts.insert(disclose(receipt));
+    receipt_index.insert(disclose(receipt), disclose(passport));
+    accepted.increment(1);
+}
+
+// Operator controls use a private secret checked against a public commitment.
+export circuit rotate_window(
+    new_threshold: Uint<64>,
+    new_pass: Bytes<32>,
+    new_deadline: Uint<64>,
+    new_issuer: Bytes<32>,
+    new_limit: Uint<32>
+): [] {
+    const secret = operator_secret();
+    assert(operator_commitment == operator_public_key(secret), "Operator authorization failed");
+    signal_threshold = disclose(new_threshold);
+    passport = disclose(new_pass);
+    window_end = disclose(new_deadline);
+    issuer_tag = disclose(new_issuer);
+    capacity = disclose(new_limit);
+    live = disclose(true);
+}
+
+export circuit pause_window(): [] {
+    const secret = operator_secret();
+    assert(operator_commitment == operator_public_key(secret), "Operator authorization failed");
+    live = disclose(false);
+}
+
+export circuit resume_window(): [] {
+    const secret = operator_secret();
+    assert(operator_commitment == operator_public_key(secret), "Operator authorization failed");
+    live = disclose(true);
+}
+
+export pure circuit operator_public_key(secret: Bytes<32>): Bytes<32> {
+    return persistentHash<Vector<2, Bytes<32>>>([pad(32, "veilmark:operator:v2"), secret]);
+}
+
+export pure circuit make_receipt_nullifier(phrase: Bytes<32>, pass: Bytes<32>): Bytes<32> {
+    return persistentHash<Vector<3, Bytes<32>>>([
+        pad(32, "veilmark:receipt:v2"),
+        phrase,
+        pass
+    ]);
+}
