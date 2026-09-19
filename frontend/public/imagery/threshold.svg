@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1120" role="img" aria-labelledby="title desc">
+  <title id="title">A signal map over a midnight horizon</title>
+  <desc id="desc">An abstract topographic field with a bright proof marker crossing a dark horizon.</desc>
+  <rect width="900" height="1120" fill="#08131f"/>
+  <path d="M0 760C146 700 240 727 351 782s224 69 329 5 141-73 220-63v396H0Z" fill="#102a3c"/>
+  <path d="M0 856c134-51 258-47 365 8 129 66 226 72 331 5 75-48 131-60 204-39v290H0Z" fill="#153e52"/>
+  <path d="M55 950c170-64 273-51 408 14 134 65 237 52 384-26" fill="none" stroke="#68d5c2" stroke-width="2" opacity=".7"/>
+  <path d="M22 1012c154-42 285-40 402 14 138 64 269 44 454-28" fill="none" stroke="#b8f36b" stroke-width="3" opacity=".7"/>
+  <circle cx="699" cy="300" r="82" fill="#b8f36b" opacity=".9"/>
+  <circle cx="699" cy="300" r="126" fill="none" stroke="#b8f36b" stroke-width="1" opacity=".38"/>
+  <path d="M121 900V205h617v695H121Z" fill="#0d2232" stroke="#9da9ff" stroke-width="2"/>
+  <path d="M205 900V309h449v591H205Z" fill="#08131f" stroke="#31526b" stroke-width="2"/>
+  <path d="M286 900V447h286v453H286Z" fill="#153e52"/>
+  <path d="M319 900V498h220v402H319Z" fill="#b8f36b" opacity=".88"/>
+  <path d="M356 900V545h146v355H356Z" fill="#08131f"/>
+  <path d="M121 205 205 118h533l-83 87H121Z" fill="#19364b" stroke="#9da9ff" stroke-width="2"/>
+  <path d="M738 205v695h-84V205Z" fill="#102a3c"/>
+  <path d="M44 1050h254M430 1050h163M672 1050h184" stroke="#9da9ff" stroke-width="2"/>
+  <path d="M74 110h260M506 110h143" stroke="#68d5c2" stroke-width="2"/>
+  <text x="45" y="77" fill="#c8d8e6" font-family="monospace" font-size="16" letter-spacing="4">A STUDY IN PRIVATE PROOF</text>
+  <text x="45" y="1090" fill="#b8f36b" font-family="monospace" font-size="14" letter-spacing="3">VEILMARK / FIELD NOTE 01</text>
+</svg>
