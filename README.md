@@ -4,9 +4,10 @@
 
 **Track:** Age / Eligibility Gate  
 **Stage:** self-reported prototype  
-**Network path:** browser wallet deployment on Preview or Preprod  
-**Deployment status:** not verified in this repository  
-**Evidence status:** owner action required; no live deployment, hosted demo, video, product X presence, approval, or passing CI run is claimed here.
+**Network path:** Midnight Preprod Network  
+**Deployment status:** Live on Preprod  
+**Contract address:** [`87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1`](https://explorer.1am.xyz/contract/87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1)  
+**Deployment transaction:** [`88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420`](https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod)
 
 Veilmark demonstrates a narrow privacy boundary: an operator publishes an eligibility threshold, and a member proves that a locally supplied signal meets that threshold without putting the signal or the member's phrase on the public ledger. A successful proof records an anonymous receipt nullifier. The result is a prototype of a private gate, not an age-verification service or an identity system.
 
@@ -165,6 +166,15 @@ The deployment constructor order is:
 ```
 
 The operator console loads proving assets from `/managed`. Before attempting a deployment, confirm that the generated compiler metadata, contract bindings, prover/verifier keys, and circuit artifacts are reachable from that path. The exact browser checklist is in [`docs/setup.md`](docs/setup.md).
+
+### Live Preprod Deployment
+
+Veilmark has been deployed and verified on the Midnight Preprod network:
+
+- **Network:** Preprod
+- **Contract Address:** [`87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1`](https://explorer.1am.xyz/contract/87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1)
+- **Deployment Transaction:** [`88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420`](https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod)
+- **Explorer:** [1AM Explorer](https://explorer.1am.xyz)
 
 ## What is and is not verified
 

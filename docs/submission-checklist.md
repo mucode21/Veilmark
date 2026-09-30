@@ -22,23 +22,14 @@ There is no separate master guide. Follow [`setup.md`](setup.md) for commands an
 Complete these fields with current evidence. Do not paste an invented, stale, or unverified address.
 
 ```text
-Repository:
-Repository owner:
-Submission/track approval:
-Selected network (Preview or Preprod):
-Contract address:
-Deployment transaction:
-Indexed deployment evidence:
-Live hosted frontend:
-Demo video:
-Product X profile/post:
-CI workflow run:
-Compile evidence:
-Test evidence:
-Type-check/build evidence:
-UI/deployment screenshots:
-Commit count:
-Evidence date:
+Repository: https://github.com/mucode21/Veilmark
+Repository owner: mucode21
+Track: Age / Eligibility Gate
+Selected network (Preview or Preprod): Preprod
+Contract address: 87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1
+Deployment transaction: 88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420
+Explorer contract URL: https://explorer.1am.xyz/contract/87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1
+Explorer transaction URL: https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod
 ```
 
 ## Required setup and verification evidence
