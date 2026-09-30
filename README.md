@@ -7,7 +7,8 @@
 **Network path:** Midnight Preprod Network  
 **Deployment status:** Live on Preprod  
 **Contract address:** [`87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1`](https://explorer.1am.xyz/contract/87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1)  
-**Deployment transaction:** [`88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420`](https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod)
+**Deployment transaction:** [`88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420`](https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod)  
+**Demo Video:** [Watch Walkthrough Demo](https://drive.google.com/file/d/10fjHC8MD2z2g_9uBrjmKYx-1uCfIXN9D/view?usp=sharing)
 
 Veilmark demonstrates a narrow privacy boundary: an operator publishes an eligibility threshold, and a member proves that a locally supplied signal meets that threshold without putting the signal or the member's phrase on the public ledger. A successful proof records an anonymous receipt nullifier. The result is a prototype of a private gate, not an age-verification service or an identity system.
 
@@ -174,6 +175,7 @@ Veilmark has been deployed and verified on the Midnight Preprod network:
 - **Network:** Preprod
 - **Contract Address:** [`87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1`](https://explorer.1am.xyz/contract/87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1)
 - **Deployment Transaction:** [`88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420`](https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod)
+- **Demo Video Walkthrough:** [Google Drive Demo Video](https://drive.google.com/file/d/10fjHC8MD2z2g_9uBrjmKYx-1uCfIXN9D/view?usp=sharing)
 - **Explorer:** [1AM Explorer](https://explorer.1am.xyz)
 
 ## What is and is not verified

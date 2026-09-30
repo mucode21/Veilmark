@@ -30,6 +30,7 @@ Contract address: 87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5
 Deployment transaction: 88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420
 Explorer contract URL: https://explorer.1am.xyz/contract/87cbdde748290bd2ad16c8868c140c3122b25041dd4e896605b2638051a0e5a1
 Explorer transaction URL: https://explorer.1am.xyz/tx/88aaedeb1c680f955c4e3185ce410c2d8c09457bed9b4c5ef7c4319fb88a6420?network=preprod
+Demo video: https://drive.google.com/file/d/10fjHC8MD2z2g_9uBrjmKYx-1uCfIXN9D/view?usp=sharing
 ```
 
 ## Required setup and verification evidence
